@@ -7,6 +7,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Keep.Extentions\Keep.Extentions.csproj" />
+    <ProjectReference Include="..\Keep.Users.Services.Abstractions\Keep.Users.Services.Abstractions.csproj" />
   </ItemGroup>
 
 

@@ -1,7 +1,7 @@
 {
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/oauth",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -9,12 +9,29 @@
           "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/oauth",
-      "UpstreamHttpMethod": [ "Get" ]
-    } 
+      "UpstreamPathTemplate": "/users/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Patch" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JWT",
+        "AllowedScopes": []
+      },
+      "Priority": 0
+    },
+    {
+      "DownstreamPathTemplate": "/auth/token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/users/auth/token",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Priority": 1
+    }
   ],
   "GlobalConfiguration": {
-    "RequestIdKey": "OcRequestId",
-    "AdministrationPath": "/administration"
+    "BaseUrl": "localhost:5000"
   }
 }

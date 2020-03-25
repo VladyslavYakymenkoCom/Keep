@@ -6,7 +6,16 @@
 
   <ItemGroup>
     <Folder Include="Specifications\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Keep.Users.Services.Abstractions\Keep.Users.Services.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

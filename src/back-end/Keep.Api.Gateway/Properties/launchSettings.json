@@ -20,7 +20,7 @@
     "Keep.Api.Gateway": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "state-indicator",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
