@@ -6,9 +6,11 @@ Notes, reminders, tasks organizer.
 Tech. stack: 
 main: ASP Core 3.1
 
+<pre>
 -RabbitMQ - message sourcing
 -OAuth - authorization 
 -Swashbuckle - automation documentation 
 -CQRS - event sourcing approach 
 -ElasticSearch - noSQL search engine 
 -SMTP dev service - for logging, testing mailing service
+</pre>
